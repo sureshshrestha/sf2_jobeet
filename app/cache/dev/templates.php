@@ -65,6 +65,7 @@
   'EnsJobeetBundle:Job:new.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/new.html.twig',
   'EnsJobeetBundle:Job:show.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/show.html.twig',
   'EnsJobeetBundle:Job:edit.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/edit.html.twig',
+  'EnsJobeetBundle::layout.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/layout.html.twig',
   'EnsJobeetBundle:Default:index.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Default/index.html.twig',
   'AcmeDemoBundle:Welcome:index.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Acme/DemoBundle/Resources/views/Welcome/index.html.twig',
   'AcmeDemoBundle:Secured:helloadmin.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Acme/DemoBundle/Resources/views/Secured/helloadmin.html.twig',

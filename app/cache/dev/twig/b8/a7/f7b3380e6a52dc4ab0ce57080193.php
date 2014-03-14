@@ -3,158 +3,130 @@
 /* EnsJobeetBundle:Job:show.html.twig */
 class __TwigTemplate_b8a7f7b3380e6a52dc4ab0ce57080193 extends Twig_Template
 {
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
+            'content' => array($this, 'block_content'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "EnsJobeetBundle::layout.html.twig";
+    }
+
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "<h1>Job</h1>
+        $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
+    }
 
-<table class=\"record_properties\">
-    <tbody>
-        <tr>
-            <th>Id</th>
-            <td>";
-        // line 7
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "id"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Type</th>
-            <td>";
-        // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "type"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Company</th>
-            <td>";
-        // line 15
+    // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        // line 4
+        echo "    ";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "company"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Logo</th>
-            <td>";
-        // line 19
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "logo"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Url</th>
-            <td>";
-        // line 23
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "url"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Position</th>
-            <td>";
-        // line 27
+        echo " is looking for a ";
         echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "position"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Location</th>
-            <td>";
-        // line 31
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "location"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td>";
-        // line 35
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "description"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>How_to_apply</th>
-            <td>";
-        // line 39
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "howtoapply"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Token</th>
-            <td>";
-        // line 43
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "token"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Is_public</th>
-            <td>";
-        // line 47
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "ispublic"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Is_activated</th>
-            <td>";
-        // line 51
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "isactivated"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td>";
-        // line 55
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "email"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Expires_at</th>
-            <td>";
-        // line 59
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "expiresat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Created_at</th>
-            <td>";
-        // line 63
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "createdat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Updated_at</th>
-            <td>";
-        // line 67
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "updatedat"), "Y-m-d H:i:s"), "html", null, true);
-        echo "</td>
-        </tr>
-    </tbody>
-</table>
+        echo "
+";
+    }
 
-<ul class=\"record_actions\">
-    <li>
+    // line 7
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        // line 8
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/css/job.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+";
+    }
+
+    // line 12
+    public function block_content($context, array $blocks = array())
+    {
+        // line 13
+        echo "    <div id=\"job\">
+      <h1>";
+        // line 14
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "company"), "html", null, true);
+        echo "</h1>
+      <h2>";
+        // line 15
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "location"), "html", null, true);
+        echo "</h2>
+      <h3>
+        ";
+        // line 17
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "position"), "html", null, true);
+        echo "
+        <small> - ";
+        // line 18
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "type"), "html", null, true);
+        echo "</small>
+      </h3>
+ 
+      ";
+        // line 21
+        if ($this->getAttribute($this->getContext($context, "entity"), "logo")) {
+            // line 22
+            echo "        <div class=\"logo\">
+          <a href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "url"), "html", null, true);
+            echo "\">
+
+            ";
+            // line 26
+            echo "            ";
+            // line 27
+            echo "            <img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ensjobeet/images/sensio-labs.gif"), "html", null, true);
+            echo "\" alt=\"sensio labs\" />
+          </a>
+        </div>
+      ";
+        }
+        // line 31
+        echo " 
+      <div class=\"description\">
+        ";
+        // line 33
+        echo nl2br(twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "description"), "html", null, true));
+        echo "
+      </div>
+ 
+      <h4>How to apply?</h4>
+ 
+      <p class=\"how_to_apply\">";
+        // line 38
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "howtoapply"), "html", null, true);
+        echo "</p>
+ 
+      <div class=\"meta\">
+        <small>posted on ";
+        // line 41
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getContext($context, "entity"), "createdat"), "m/d/Y"), "html", null, true);
+        echo "</small>
+      </div>
+ 
+      <div style=\"padding: 20px 0\">
         <a href=\"";
-        // line 74
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job"), "html", null, true);
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 79
+        // line 45
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_edit", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
         echo "\">
-            Edit
+          Edit
         </a>
-    </li>
-    <li>
-        <form action=\"";
-        // line 84
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_delete", array("id" => $this->getAttribute($this->getContext($context, "entity"), "id"))), "html", null, true);
-        echo "\" method=\"post\">
-            ";
-        // line 85
-        echo $this->env->getExtension('form')->renderWidget($this->getContext($context, "delete_form"));
-        echo "
-            <button type=\"submit\">Delete</button>
-        </form>
-    </li>
-</ul>
+      </div>
+    </div>
 ";
     }
 

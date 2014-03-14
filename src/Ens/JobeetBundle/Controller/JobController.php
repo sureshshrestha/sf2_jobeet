@@ -19,13 +19,16 @@ class JobController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
-
-        $entities = $em->getRepository('EnsJobeetBundle:Job')->findAll();
-
-        return $this->render('EnsJobeetBundle:Job:index.html.twig', array(
-            'entities' => $entities
-        ));
+      $em = $this->getDoctrine()->getEntityManager();
+     
+      $query = $em->createQuery(
+        'SELECT j FROM EnsJobeetBundle:Job j WHERE j.created_at > :date'
+      )->setParameter('date', date('Y-m-d H:i:s', time() - 86400 * 30));
+      $entities = $query->getResult();
+     
+      return $this->render('EnsJobeetBundle:Job:index.html.twig', array(
+        'entities' => $entities
+      ));
     }
 
     /**
