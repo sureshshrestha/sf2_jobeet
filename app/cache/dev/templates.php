@@ -62,6 +62,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/vendor/symfony/src/Symfony/Bundle/SwiftmailerBundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/vendor/symfony/src/Symfony/Bundle/DoctrineBundle/Resources/views/Collector/db.html.twig',
   'EnsJobeetBundle:Job:index.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/index.html.twig',
+  'EnsJobeetBundle:Job:list.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/list.html.twig',
   'EnsJobeetBundle:Job:new.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/new.html.twig',
   'EnsJobeetBundle:Job:show.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/show.html.twig',
   'EnsJobeetBundle:Job:edit.html.twig' => '/home/sfprojects/test/Symfony_2.0.11/src/Ens/JobeetBundle/Resources/views/Job/edit.html.twig',

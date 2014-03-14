@@ -84,10 +84,52 @@ class EnsJobeetBundleEntityCategoryProxy extends \Ens\JobeetBundle\Entity\Catego
         return parent::getCategoryAffiliates();
     }
 
+    public function setActiveJobs($jobs)
+    {
+        $this->__load();
+        return parent::setActiveJobs($jobs);
+    }
+
+    public function getActiveJobs()
+    {
+        $this->__load();
+        return parent::getActiveJobs();
+    }
+
+    public function setMoreJobs($jobs)
+    {
+        $this->__load();
+        return parent::setMoreJobs($jobs);
+    }
+
+    public function getMoreJobs()
+    {
+        $this->__load();
+        return parent::getMoreJobs();
+    }
+
+    public function setSlug($slug)
+    {
+        $this->__load();
+        return parent::setSlug($slug);
+    }
+
+    public function getSlug()
+    {
+        $this->__load();
+        return parent::getSlug();
+    }
+
+    public function setSlugValue()
+    {
+        $this->__load();
+        return parent::setSlugValue();
+    }
+
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'name', 'jobs', 'category_affiliates');
+        return array('__isInitialized__', 'id', 'name', 'slug', 'jobs', 'category_affiliates');
     }
 
     public function __clone()

@@ -31,6 +31,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        'ens_job_update' => true,
        'ens_job_delete' => true,
        'EnsJobeetBundle_homepage' => true,
+       'EnsJobeetBundle_category' => true,
     );
 
     /**
@@ -142,5 +143,10 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function getEnsJobeetBundle_homepageRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\JobController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getEnsJobeetBundle_categoryRouteInfo()
+    {
+        return array(array (  0 => 'slug',  1 => 'page',), array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\CategoryController::showAction',  'page' => 1,), array (), array (  0 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'page',  ),  1 =>   array (    0 => 'variable',    1 => '/',    2 => '[^/]+?',    3 => 'slug',  ),  2 =>   array (    0 => 'text',    1 => '/category',  ),));
     }
 }

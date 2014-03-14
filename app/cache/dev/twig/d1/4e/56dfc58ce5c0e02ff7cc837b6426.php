@@ -40,7 +40,7 @@ class __TwigTemplate_d14e56dfc58ce5c0e02ff7cc837b6426 extends Twig_Template
             <div id=\"symfony-header\">
                 <a href=\"";
         // line 12
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_welcome"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJobeetBundle_homepage"), "html", null, true);
         echo "\">
                     <img src=\"";
         // line 13

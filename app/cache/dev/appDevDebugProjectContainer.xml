@@ -38,6 +38,8 @@
     <parameter key="mailer_password"></parameter>
     <parameter key="locale">en</parameter>
     <parameter key="secret">4655176eac2e92d9f54a52339f60af9c79724fdf</parameter>
+    <parameter key="max_jobs_on_homepage">10</parameter>
+    <parameter key="max_jobs_on_category">15</parameter>
     <parameter key="router_listener.class">Symfony\Bundle\FrameworkBundle\EventListener\RouterListener</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
     <parameter key="controller_name_converter.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser</parameter>
